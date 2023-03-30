@@ -6,6 +6,10 @@ run-image = "orbit/stacks-run:elixir"
 build-image = "orbit/stacks-build:elixir"
 
 [[buildpacks]]
-id = "orbit/elixir-buildpack"
-version = "0.0.1"
 uri = "../../buildpacks/elixir"
+
+[[order]]
+    [[order.group]]
+    id = "orbit/elixir-buildpack"
+    version = "0.0.2"
+

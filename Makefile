@@ -5,4 +5,4 @@ build-elixir-stack-m1:
 build-elixir-builder:
 	(cd builders; pack builder create orbit/elixir-builder:alpine --config elixir/builder.toml)
 build-sample-app:
-	(cd sample_phx_app; pack build sample_phx_app --builder orbit/elixir:alpine --buildpack orbit/elixir-buildpack)
+	(cd sample_phx_app; pack build sample_phx_app --builder orbit/elixir-builder:alpine --buildpack orbit/elixir-buildpack)
