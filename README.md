@@ -10,3 +10,11 @@ What's missing:
 2. Ability to start different commands
 3. Reuse buildpack?
 4. Better documentation
+
+### Step 1: Create the stack
+Non-ARM64/Apple Silicon: `make build-elixir-stack`
+
+ARM64/Apple Silicon: `make build-elixir-stack`
+
+### Step 2: Create the builder
+`build-elixir-builder`
