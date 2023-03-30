@@ -18,3 +18,15 @@ ARM64/Apple Silicon: `make build-elixir-stack`
 
 ### Step 2: Create the builder
 `build-elixir-builder`
+
+### Step 3: Use the builder to build the sample app
+`make build-sample-app`
+
+### Step 4: Build your own app
+
+`pack build <image-name> --builder orbit/elixir:alpine --buildpack orbit/elixir-buildpack`
+
+E.g. for helios (inside helios dir),
+
+`pack build helios --builder orbit/elixir:alpine --buildpack orbit/elixir-buildpack`
+
