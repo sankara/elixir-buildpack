@@ -14,10 +14,10 @@ What's missing:
 ### Step 1: Create the stack
 Non-ARM64/Apple Silicon: `make build-elixir-stack`
 
-ARM64/Apple Silicon: `make build-elixir-stack`
+ARM64/Apple Silicon: `make build-elixir-stack-1`
 
 ### Step 2: Create the builder
-`build-elixir-builder`
+`make build-elixir-builder`
 
 ### Step 3: Use the builder to build the sample app
 `make build-sample-app`
