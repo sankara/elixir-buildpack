@@ -1,0 +1,6 @@
+# Buildpacks to include in builder
+# Stack that will be used by the builder
+[stack]
+id = "com.speedyorbit.stacks.elixir"
+run-image = "orbit/stacks-run:elixir"
+build-image = "orbit/stacks-build:elixir"

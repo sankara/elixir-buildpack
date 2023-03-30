@@ -1,0 +1,8 @@
+api = "0.8"
+
+[buildpack]
+  id = "orbit/elixir"
+  version = "0.0.1"
+
+[[stacks]]
+  id = "com.speedyorbit.stacks.elixir"

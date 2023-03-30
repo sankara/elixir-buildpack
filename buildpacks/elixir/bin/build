@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -xeuo pipefail
+
+layers_dir="$1"
+env_dir="$2/env"
+plan_path="$3"
+
+# 1. INSTALL HEX & REBAR
+mix do local.hex --force, local.rebar --force
+
+# 2. INSTALL AND COMPILE PACKAGES
+echo "---> Installing and compiling packages"
+mix do deps.get, deps.compile
+
+# 3. COMPILE PROJECT
+echo "---> Compiling project"
+mix do clean, compile
+
+exit 0
