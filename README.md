@@ -10,6 +10,8 @@ What's missing:
 2. Ability to start different commands
 3. Reuse buildpack?
 4. Better documentation
+5. BUG: No usable layer for epinio
+6. build and push should be scripted with prefix, platform and tag configurable
 
 ### Step 1: Create the stack
 Non-ARM64/Apple Silicon: `make build-elixir-stack`
