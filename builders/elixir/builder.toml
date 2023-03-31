@@ -1,17 +1,16 @@
 # Buildpacks to include in builder
-# Stack that will be used by the builder
-[stack]
-id = "com.speedyorbit.stacks.elixir"
-run-image = "orbit/stacks-run:elixir"
-build-image = "orbit/stacks-build:elixir"
-
 [[buildpacks]]
-id = "orbit/elixir-buildpack"
+id = "sankara/elixir-buildpack:alpine"
 version = "0.0.2"
-uri = "../../buildpacks/elixir"
+uri = "sankara/elixir-buildpack:alpine"
 
 [[order]]
     [[order.group]]
-        id = "orbit/elixir-buildpack"
+        id = "sankara/elixir-buildpack:alpine"
         version = "0.0.2"
 
+# Stack that will be used by the builder
+[stack]
+id = "com.speedyorbit.stacks.elixir"
+run-image = "sankara/elixir-stacks-run:elixir"
+build-image = "sankara/elixir-stacks-build:elixir"

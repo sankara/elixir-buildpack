@@ -13,12 +13,12 @@ usage() {
   echo "Usage: "
   echo "  $0 [-f <prefix>] [-p <platform>] <dir>"
   echo "    -f    prefix to use for images      (default: ${DEFAULT_PREFIX})"
-  echo "    -p    prefix to use for images      (default: ${DEFAULT_PLATFORM})"
+  echo "    -p    platform to use for images      (default: ${DEFAULT_PLATFORM})"
   echo "   <dir>  directory of stack to build"
   exit 1; 
 }
 
-while getopts "v:p:" o; do
+while getopts "f:p:" o; do
   case "${o}" in
     f)
       REPO_PREFIX=${OPTARG}

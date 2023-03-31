@@ -1,7 +1,7 @@
 api = "0.8"
 
 [buildpack]
-  id = "orbit/elixir-buildpack"
+  id = "sankara/elixir-buildpack:alpine"
   version = "0.0.2"
 
 [[stacks]]
