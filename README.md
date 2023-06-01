@@ -18,13 +18,16 @@ Non-ARM64/Apple Silicon: `make build-elixir-stack`
 
 ARM64/Apple Silicon: `make build-elixir-stack-1`
 
-### Step 2: Create the builder
+### Step 2: Create the buildpack image
+`make build-elixir-buildpack`
+
+### Step 3: Create the builder
 `make build-elixir-builder`
 
-### Step 3: Use the builder to build the sample app
+### Step 4: Use the builder to build the sample app
 `make build-sample-app`
 
-### Step 4: Build your own app
+### Step 5: Build your own app
 
 `pack build <image-name> --builder orbit/elixir:alpine --buildpack orbit/elixir-buildpack`
 
@@ -32,3 +35,7 @@ E.g. for helios (inside helios dir),
 
 `pack build helios --builder orbit/elixir:alpine --buildpack orbit/elixir-buildpack`
 
+Epinio fails with 
+```
+buildpack ERROR: failed to export: get run image top layer SHA: image "registry.epinio.svc.cluster.local:5000/apps/workspace-helios:2b629cb8ee6d8e6e" has no layers
+```

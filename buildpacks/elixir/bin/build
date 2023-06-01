@@ -8,7 +8,9 @@ plan_path="$3"
 
 mix_dir="${layers_dir}/mix"
 mkdir -p $mix_dir
+echo -e '[types]\nlaunch = true\ncache=true' > "$layers_dir/mix.toml"
 export MIX_HOME="${mix_dir}"
+
 
 # 1. INSTALL HEX & REBAR
 mix do local.hex --force, local.rebar --force
@@ -27,6 +29,7 @@ cat > "$layers_dir/launch.toml" << EOL
 [[processes]]
 type = "backend"
 command = "mix phx.server"
+default = true
 EOL
 
 exit 0
